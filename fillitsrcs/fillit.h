@@ -14,7 +14,7 @@
 # define FILLIT_H
 # define BUFF_SIZE 21
 
-# include "../libft/includes/libft.h"
+# include "../libft/libft.h"
 # include <fcntl.h>
 
 int				validate(char *raw);

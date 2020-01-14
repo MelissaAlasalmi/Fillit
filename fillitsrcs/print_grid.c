@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../libft/includes/libft.h"
+#include "../libft/libft.h"
 
 void	ft_lstdelsimple(t_list *pieces)
 {

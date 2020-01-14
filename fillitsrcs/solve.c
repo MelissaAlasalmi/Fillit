@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../libft/includes/libft.h"
+#include "../libft/libft.h"
 #include "fillit.h"
 
 int		find_place(int pos, char *grid, int *temp)

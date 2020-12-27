@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../libft/srcs/libft.h"
+#include "fillit.h"
 
 int		asciicheck(char *raw)
 {

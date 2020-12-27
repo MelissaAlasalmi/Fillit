@@ -10,7 +10,6 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../libft/srcs/libft.h"
 #include "fillit.h"
 
 void	ft_foreach(int *tab, int length)

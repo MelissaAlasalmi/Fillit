@@ -12,11 +12,11 @@
 
 NAME = fillit
 
-SRCS = 	fillitsrcs/main.c \
-		fillitsrcs/validate.c \
-		fillitsrcs/solve.c \
-		fillitsrcs/scan_save_tetramino.c \
-		fillitsrcs/print_grid.c \
+SRCS = 	fillit_srcs/main.c \
+		fillit_srcs/validate.c \
+		fillit_srcs/solve.c \
+		fillit_srcs/scan_save_tetramino.c \
+		fillit_srcs/print_grid.c \
 
 OBJS = 	validate.o \
 		solve.o \
@@ -24,7 +24,7 @@ OBJS = 	validate.o \
 		print_grid.o \
 		main.o \
 
-INCL = -I ./fillitsrcs -I ./libft/includes/
+INCL = -I ./fillit_srcs -I ./libft/includes/
 
 CFLAGS = -Wall -Wextra -Werror
 
@@ -33,18 +33,20 @@ LIB = -L./libft -lft
 all: $(NAME)
 
 $(NAME):
-	make -C libft
-	gcc $(CFLAGS) -c $(SRCS) $(INCS)
-	gcc $(CFLAGS) $(INCS) $(OBJS) $(LIB) -o $(NAME)
+	@make -C libft
+	@gcc $(CFLAGS) -c $(SRCS) $(INCS)
+	@gcc $(CFLAGS) $(INCS) $(OBJS) $(LIB) -o $(NAME)
+	@mkdir fillit_objs
+	@mv $(OBJS) fillit_objs
 
 .PHONY: clean fclean re all
 
 clean:
-	rm -f $(OBJS)
-	make -C libft clean
+	@rm -rf fillit_objs
+	@make -C libft clean
 
 fclean: clean
-	rm -f $(NAME)
-	make -C libft fclean
+	@rm -f $(NAME)
+	@make -C libft fclean
 
 re: fclean all

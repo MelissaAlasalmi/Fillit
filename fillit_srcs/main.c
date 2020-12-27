@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../libft/libft.h"
+#include "../libft/srcs/libft.h"
 #include "fillit.h"
 
 char		*buildraw(int fd)
